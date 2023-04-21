@@ -39,12 +39,20 @@ public class Borsa {
 				a = attrezzi[i];
 		return a;
 	}
+	
 		public int getPeso() {
 			int peso = 0;
 			for (int i= 0; i<this.numeroAttrezzi; i++)
 				peso += this.attrezzi[i].getPeso();
 			return peso;
 		}
+		
+		public boolean getPesoRimanente(Attrezzo a) {
+			if(a != null && this.getPesoMax()-this.getPeso()>=a.getPeso())
+				return true;
+			return false; 
+		}
+		
 		public boolean isEmpty() {
 			return this.numeroAttrezzi == 0;
 		}
