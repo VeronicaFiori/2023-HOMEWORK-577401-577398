@@ -1,5 +1,4 @@
 package it.uniroma3.diadia.giocatore;
-
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -8,21 +7,21 @@ import it.uniroma3.diadia.giocatore.Giocatore;
 
 public class GiocatoreTest {
 	
-	Giocatore giocatore = new Giocatore();
+	Giocatore g = new Giocatore();
 	
 	@Test
-	public void testGetCfu() {
-		assertEquals(20, giocatore.getCfu());
+	public void testGetCfuDefault() {
+		assertEquals(20, g.getCfu());
 	}
 	
 	@Test
 	public void testSetCfu() {
-		giocatore.setCfu(12);
-		assertEquals(12, giocatore.getCfu());
+		g.setCfu(3);
+		assertEquals(3, g.getCfu());
 	}
 
 	@Test
-	public void testGetBorsa() {
-		assertNotNull(giocatore.getBorsa());
+	public void testGetBorsaDefault() {
+		assertNotNull(g.getBorsa());
 	}
 }
